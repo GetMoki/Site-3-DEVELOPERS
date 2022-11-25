@@ -82,14 +82,14 @@ body{
     z-index: 9;
     &::before{
     	content: '';
-			background: url('/img/favicon.svg') left /35px 35px no-repeat;
+			background: url('../img/favicon.svg') left /35px 35px no-repeat;
       padding: 20px 35px 20px 5px;
       @media (min-width: 1920px) {
-        background: url('/img/favicon.svg') left /59px 59px no-repeat;
+        background: url('../img/favicon.svg') left /59px 59px no-repeat;
         padding: 34.5px 59px 34.5px 10px;
       }
       @media (min-width: 2560px) {
-        background: url('/img/favicon.svg') left /82px 82px no-repeat;
+        background: url('../img/favicon.svg') left /82px 82px no-repeat;
         padding: 50px 82px 50px 15px;
       }
     }
