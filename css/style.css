@@ -198,7 +198,7 @@ body._lock {
 
 .header__logo::before {
   content: '';
-  background: url("/img/favicon.svg") left/35px 35px no-repeat;
+  background: url("img/favicon.svg") left/35px 35px no-repeat;
   padding: 20px 35px 20px 5px;
 }
 
