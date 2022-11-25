@@ -79,4 +79,14 @@ if (menuLinks.length > 0) {
 }
 //=========================================================================================
 //Робота випадаючого списку в блоці "About"
+const arrayDropListItems = document.querySelectorAll('.about__item');
 
+if (arrayDropListItems.length > 0) {
+  arrayDropListItems.forEach(DropListItem => {
+    DropListItem.addEventListener('click', openDropList);
+  });
+
+  function openDropList(e) {
+    this.classList.toggle('_active');
+  }
+}
