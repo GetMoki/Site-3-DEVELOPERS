@@ -56,8 +56,20 @@ body{
     color: #111111;
   }
 }
+//Swiper - slider
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+
 //=========================================================================================
-//Стилі сексії хедр і меню бургера
+//Header + menu burger + adaptive
 .header {
   position: fixed;
   top:0;
@@ -326,6 +338,7 @@ body{
   }
 }
 //=========================================================================================
+//Fullscreen block + adaptive
 .fullscreen {
   min-height: 100vh;
   margin-top: 80px;
@@ -382,6 +395,7 @@ body{
   }
 }
 //=========================================================================================
+//About Block + adaptive
 .about {
   margin-top: 51px;
   background: #DAECFF;
@@ -544,8 +558,168 @@ body{
   }
 }
 //=========================================================================================
+//Development Block + adaptive 
+.development {
+  // .development .swiper
+  & .swiper {
+  }
+  // .development .swiper-slide
+  & .swiper-slide {
+    height: 615px;
+    padding: 25px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  // .development__title
+  &__title {
+    margin-top: 40px;
+  }
+  // .development__slider
+  &__slider {
+    border: 2px solid #67AEFC;
+    border-radius: 15px;
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 175%;
+    color: #000000;
+  }
+  // .development__part
+  &__part{
+    flex: 1 1 50%;
+  }
+  // .development__stage
+  &__stage {
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  // .development__text
+  &__text {
+  }
+  // .development__picture
+  &__picture {
+    flex: 1 1 50%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img{
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+  // .development__button
+  &__button{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 45px;
+    // .development .swiper-button-prev/next-unique
+    & .swiper-button-prev-unique, .swiper-button-next-unique  {
+      width: 60px;
+      height: 60px;
+      border: 2px solid #67AEFC;
+      border-radius: 15px;
+      &::after{
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-top: 2px solid #000000;
+        border-left: 2px solid #000000;
+        transform: rotate(-45deg);
+      }
+    }
+    & .swiper-button-prev-unique  {
+      &::after{
+       position: relative;
+        left: 20px;
+        top: 16px;
+        transform: rotate(-45deg);
+      }
+    }
+    & .swiper-button-next-unique  {
+      &::after{
+        position: relative;
+        left: 12px;
+        top: 16px;
+        transform: rotate(135deg);
+      }
+    }
+  }
+   @media (min-width: 760px) {
+    & .swiper-slide {
+      height: 320px;
+      padding: 25px 30px 0px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    &__text {
+      margin-top: 20px;
+    }
+    &__picture {
+      margin-bottom: 0px;
+    }
+  }
+  @media (min-width: 1024px) {
+    &__title {
+      margin-top: 60px;
+    }
+    &__slider {
+      margin-top: 46px;
+    }
+    &__button{
+      margin: 50px 0px 100px;
+      justify-content: center;
+      & .swiper-button-prev-unique, .swiper-button-next-unique  {
+        margin: 0 15px 0;
+      }
+    }
+  }
+  @media (min-width: 1420px) {
+    & .container{
+      min-width: 1390px;
+    }
+    & .swiper-slide {
+      height: 391px;
+    }
+    &__title {
+      margin-top: 80px;
+    }
+    &__slider {
+      margin-top: 70px;
+    }
+    &__stage {
+      font-size: 21px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+  }
+  @media (min-width: 1920px) {
+    &__title {
+      margin-top: 125px;
+    }
+    &__slider {
+      margin-top: 96px;
+    }
+    &__button{
+      margin: 70px 0px 130px;
+    }
+  }
+  @media (min-width: 2560px) {
+    &__title {
+      margin-top: 145px;
+    }
+  }
+}
 //=========================================================================================
 //=========================================================================================
+//How we works Block + adaptive
 .footer {
   background: #64ABF9;
   // .footer__row

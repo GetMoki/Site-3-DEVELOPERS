@@ -90,3 +90,34 @@ if (arrayDropListItems.length > 0) {
     this.classList.toggle('_active');
   }
 }
+//=========================================================================================
+//ScriptSwiper - first slider in Development block
+new Swiper('.development__slider', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    1420: {
+      slidesPerView: 2,
+    }
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next-unique',
+    prevEl: '.swiper-button-prev-unique',
+  },
+});
+
+//=========================================================================================
+//Script Swiper - second slider in Works block
+//new Swiper('.development__slider');
