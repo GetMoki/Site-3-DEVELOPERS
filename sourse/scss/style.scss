@@ -20,8 +20,12 @@ body{
 //General clases of site styles
 .wrapper {
 	font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 .page {
+  min-height: 100%;
 }
 .container {
 	min-width: 375px;
@@ -43,13 +47,13 @@ body{
 .section {
   // .section__title
   &__title {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 23px;
-  line-height: 150%;
-  text-align: center;
-  color: #111111;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 23px;
+    line-height: 150%;
+    text-align: center;
+    color: #111111;
   }
 }
 //=========================================================================================
@@ -86,11 +90,11 @@ body{
       padding: 20px 35px 20px 5px;
       @media (min-width: 1920px) {
         background: url('../img/favicon.svg') left /59px 59px no-repeat;
-        padding: 34.5px 59px 34.5px 10px;
+        padding: 40px 59px 34.5px 10px;
       }
       @media (min-width: 2560px) {
         background: url('../img/favicon.svg') left /82px 82px no-repeat;
-        padding: 50px 82px 50px 15px;
+        padding: 60px 82px 50px 15px;
       }
     }
   }
@@ -101,11 +105,11 @@ body{
     font-size: 13px;
     letter-spacing: 2.5px;
     @media (min-width: 1920px) {
-      font-size: 16px;
+      font-size: 24px;
       letter-spacing: 5.5px;
     }
     @media (min-width: 2560px) {
-      font-size: 20px;
+      font-size: 32px;
       letter-spacing: 7.5px;
     }
   }
@@ -457,7 +461,7 @@ body{
     display: none;
     border-left: 2px solid #000000;
     padding-left: 25px;
-    margin: 20px 40px 0px 32px;
+    margin: 20px 40px 0px 30px;
   }
   @media (min-width: 450px) {
     &__name {
@@ -507,8 +511,8 @@ body{
       margin-right: 40px;
     }
     &__text {
-      padding-left: 37px;
-      margin: 20px 70px 0px 63px;
+      padding-left: 27px;
+      margin: 20px 70px 0px 62px;
     }
   }
   @media (min-width: 2560px) {
@@ -534,8 +538,8 @@ body{
       height: 30px;
     }
     &__text {
-      padding-left: 37px;
-      margin: 20px 100px 0px 63px;
+      padding-left: 45px;
+      margin: 20px 100px 0px 60px;
     }
   }
 }
@@ -543,6 +547,201 @@ body{
 //=========================================================================================
 //=========================================================================================
 .footer {
-}
+  background: #64ABF9;
+  // .footer__row
+  &__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  // .footer__column
+  &__column {
+    margin-top: 60px;
+  }
+  // .footer__logo
+  &__logo {
+    &::before{
+      content: '';
+  	  background: url('../img/favicon.svg') left /85px 85px no-repeat;
+      padding: 55px 85px 42.5px 5px;
+    }
+  }
+  //.footer__title
+  &__title{
+    font-weight: 800;
+    color: #FFFFFF;
+    font-size: 22px;
+    letter-spacing: 5px;
+  }
+  // .footer__signature
+  &__signature {
+    margin: 36px 0px 40px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  @media (min-width: 1024px) {
+    &__row {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 50px 50px 0px;
+    }
+    &__signature {
+      margin: 56px 0px 60px;
+    }
+  }
+  @media (min-width: 1420px) {
+    &__signature {
+      margin: 100px 0px 80px;
+    }
+  }
+  @media (min-width: 1920px) {
+    &__row{
+      margin: 120px 0px;
+    }
+    &__title{
+      font-size: 28px;
+      letter-spacing: 6px;
+    }
+    &__signature {
+      font-size: 22px;
+      margin: 120px 0px 80px;
+    }
 
+  }
+  @media (min-width: 2560px) {
+    &__logo {
+      &::before{
+        padding-left: 10px;
+      }
+    }
+    &__title{
+      font-size: 32px;
+      letter-spacing: 7px;
+    }
+    &__signature {
+      font-size: 24px;
+      margin: 120px 0px 100px;
+    }
+  }
+}
+.social {
+  // .social__row
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+  }
+  // .social__item
+  &__item {
+  }
+  // .social__link
+  &__link {
+    & img{
+      width: 32px;
+      height: 32px;
+    }
+  }
+  @media (min-width: 1920px) {
+    &__row{
+      margin-top: 80px;
+    }
+    &__link {
+      & img{
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
+  @media (min-width: 2560px) {
+    &__row{
+      margin-top: 100px;
+    }
+    &__link {
+      & img{
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+.contacts {
+  // .contacts__list
+  &__list {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+  }
+  // .contacts__item
+  &__item {
+    &:first-child{
+      margin-top: 0px;
+    }
+    margin-top: 15px;
+    &::before{
+      content: '';
+      background: url('../img/social/4.svg') left /28px 28px no-repeat;
+      padding: 24px 28px 28px 5px;
+    }
+  }
+  @media (min-width: 1920px) {
+    &__list {
+      font-size: 24px;
+    }
+    &__item {
+      &:first-child{
+        margin-top: 0px;
+      }
+      margin-top: 15px;
+      &::before{
+        content: '';
+        background: url('../img/social/4.svg') left /32px 32px no-repeat;
+        padding: 28px 32px 32px 5px;
+      }
+    }
+  }
+  @media (min-width: 2560px) {
+    &__list {
+      font-size: 28px;
+    }
+    &__item {
+      &:first-child{
+        margin-top: 0px;
+      }
+      margin-top: 25px;
+      &::before{
+        content: '';
+        background: url('../img/social/4.svg') left /42px 42px no-repeat;
+        padding: 36px 42px 42px 10px;
+      }
+    }
+  }
+}
+.mail {
+  // .mail__text
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
+  @media (min-width: 1920px) {
+    &__text {
+      font-size: 24px;
+    }
+  }
+  @media (min-width: 2560px) {
+    &__text {
+      font-size: 28px;
+    }
+  }
+}
 //=========================================================================================
