@@ -50,7 +50,7 @@ if (iconMenu) {
 }
 
 // Плавне гортання до розділу менею після натискання на посилання в меню 
-const menuLinks = document.querySelectorAll('.menu__link[data-goto]');//записуємо в масив лише ті селектори які мають атрибут data-goto
+const menuLinks = document.querySelectorAll('a[data-goto]') //записуємо в масив лише ті селектори які мають атрибут data-goto //  .querySelectorAll('.menu__link[data-goto]');
 
 if (menuLinks.length > 0) {
   menuLinks.forEach(menuLink => {
@@ -104,6 +104,7 @@ const devSlider = new Swiper('.development__slider', {
   breakpoints: {
     1420: {
       slidesPerView: 2,
+      spaceBetween: 25,
     }
   },
   keyboard: {
@@ -160,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let formData = new FormData(form);
 
     if (error === 0) {
-      document.querySelector('.feedback').classList.add('_sending');
+      document.querySelector('.order__button_feedback').classList.add('_sending');
       let response = await fetch('sendmail.php', {
         method: 'POST',
         body: formData,
@@ -169,10 +170,10 @@ document.addEventListener('DOMContentLoaded', function () {
         let result = await response.json();
         alert(result.message);
         form.reset();
-        document.querySelector('.feedback').classList.remove('_sending');
+        document.querySelector('.order__button_feedback').classList.remove('_sending');
       } else {
-        alert("Oшибка");
-        document.querySelector('.feedback').classList.remove('_sending');
+        alert("Oшибка: заявка не отправлена");
+        document.querySelector('.order__button_feedback').classList.remove('_sending');
       }
     } else {
       alert('Заполните обязательные поля');
